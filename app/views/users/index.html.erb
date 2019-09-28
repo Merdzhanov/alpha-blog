@@ -1,5 +1,6 @@
 <h1 align="center">All Alpha Bloggers</h1>
 <div align="center">
+  <%= will_paginate @users, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
     <% @users.each do |user| %>
     <ul class="listing">
         <div class="row">
@@ -13,4 +14,6 @@
         </div>
     </ul>
     <% end %>
+    <%= will_paginate @users, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: %w(pagination justify-content-center) %>
+    <%= will_paginate @users, renderer: WillPaginate::ActionView::LinkRenderer %>
 </div>
