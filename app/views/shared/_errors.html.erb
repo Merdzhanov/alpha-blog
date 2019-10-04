@@ -1,7 +1,7 @@
 <% if obj.errors.any? %>
     <div class="row">
-     <div class="col-xs-8 offset-3">
-       <div class="card bg-success text-light">
+     <div class="col-sm-6 offset-3 error">
+       <div class="card text-light bg-danger">
          <div class="card-header">
            <h2 class="card-title">
            <%= pluralize(obj.errors.count, "error") %>
