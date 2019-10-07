@@ -3,8 +3,9 @@
 <div class="row">
   <div class="col-md-4 offset-5">
     <%= gravatar_for @user %>
+  </div>
 </div>
-</div>
+
 <h4 align="center"><%= @user.username %>'s articles</h4>
 <%= will_paginate @user_articles, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: %w(pagination justify-content-center) %>
 <%= render 'articles/article', obj: @user_articles %>
